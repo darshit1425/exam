@@ -60,31 +60,39 @@ class _EmailState extends State<Email> {
               ),
               SizedBox(height: 10,),
               // Icon(Icons.title_sharp),
-              Column(
+              Row(
                 children: [
+                  Icon(Icons.check_box),
                   Text("Remember",style: TextStyle(fontSize: 20),),
+                  SizedBox(width: 200,),
+                  Text("Forget  Password?"),
                 ],
               ),
-
-              Text("Forget  Password?"),
               SizedBox(height: 200),
-              Container(
-                alignment: Alignment.center,
-                height: 50,
-                width: 200,
-                child: Text(
-                  "Sing Up",
-                  style: TextStyle(color: Colors.white),
+              InkWell(onTap: (){setState(() {
+
+              });},
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 50,
+                  width: 200,
+                  child: Text(
+                    "Sing Up",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.pinkAccent,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
               ),
               SizedBox(height: 50),
-              Text("Don't have Account?",style: TextStyle(fontSize: 15),),
-              Text("Create Account",style: TextStyle(fontSize: 15,color: Colors.pink),),
-
-
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Don't have Account?",style: TextStyle(fontSize: 15),),
+                  Text("Create Account",style: TextStyle(fontSize: 15,color: Colors.pink),),
+                ],
+              )
             ],
           ),
         ),
